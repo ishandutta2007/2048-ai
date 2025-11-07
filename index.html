@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <title>2048 AI by Ishan</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="vendor/2048.min.css">
     <link rel="stylesheet" href="ai.css">
     <link rel="shortcut icon" href="favicon.ico">
@@ -15,13 +19,28 @@
     <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
 
-  <body>
+  <body class="retro-theme">
+    <div class="bg-decoration"></div>
     <div class="container">
       <div class="heading">
-        <h1 class="title">2048</h1>
+        <div class="title-block">
+          <h1 class="title">2048</h1>
+          <p class="subtitle">Stack power tiles and let the AI flex its game sense.</p>
+        </div>
         <div class="scores-container">
           <div class="score-container">0</div>
           <div class="best-container">0</div>
+        </div>
+      </div>
+
+      <div class="info-panels">
+        <div class="info-card">
+          <h2>How it works</h2>
+          <p>Our expectimax-powered AI thinks several moves ahead to keep the board alive and chase the legendary 2048 tile.</p>
+        </div>
+        <div class="info-card">
+          <h2>Game plan</h2>
+          <p>Spin up the AI or take the wheel yourself. Stack combos, ride the chain reactions, and push the score multiplier sky high.</p>
         </div>
       </div>
 
@@ -76,18 +95,31 @@
         </div>
       </div>
 
-      <p class="game-explanation">
-        <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
-      </p>
-      <hr>
-      <p>
-        <strong class="important">Note:</strong> This site is not the official version of 2048. It's an AI written for the game. The AI uses expectimax search to find the best move for the current board.
-      </p>
-      <hr>
-      <p>
-        Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-      </p>
+      <div class="game-extras">
+        <p class="game-explanation">
+          <strong class="important">Controls:</strong> Use your <strong>arrow keys</strong> to slide every tile. Combine equal tiles to level up the board.
+        </p>
+        <p>
+          <strong class="important">Behind the scenes:</strong> This clone ships with an expectimax AI that evaluates thousands of boards per second to keep the combos flowing.
+        </p>
+        <p class="credits">
+          Created by <a href="https://github.com/ishandutta2007" target="_blank" rel="noopener noreferrer">Ishan.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank" rel="noopener noreferrer">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank" rel="noopener noreferrer">Threes by Asher Vollmer.</a>
+        </p>
+      </div>
     </div>
+
+    <div id="github-modal" class="github-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button class="close-modal" id="close-github-modal" aria-label="Close follow prompt">×</button>
+        <h2>GG! Follow along on GitHub</h2>
+        <p>Like the run? Smash follow to keep up with fresh AI experiments and game dev shenanigans.</p>
+        <div class="github-button-wrapper">
+          <iframe src="https://ghbtns.com/github-btn.html?user=ishan&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="250" height="35" title="Follow Ishan on GitHub"></iframe>
+        </div>
+        <a class="modal-link" href="https://github.com/ishandutta2007" target="_blank" rel="noopener noreferrer">Explore more projects →</a>
+      </div>
+    </div>
+    <div id="github-modal-overlay" class="github-modal-overlay" aria-hidden="true"></div>
 
   </body>
 </html>

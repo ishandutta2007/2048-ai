@@ -17,6 +17,42 @@ const workers = [
 let working = 0;
 let bestMove, bestResult;
 let startTime, totalMove;
+let githubModalShown = false;
+
+const githubModal = document.getElementById("github-modal");
+const githubModalOverlay = document.getElementById("github-modal-overlay");
+const closeGithubModalButton = document.getElementById("close-github-modal");
+
+function showGithubFollowPrompt() {
+  if (!githubModal || !githubModalOverlay || githubModalShown) return;
+  githubModal.classList.add("visible");
+  githubModalOverlay.classList.add("visible");
+  githubModal.setAttribute("aria-hidden", "false");
+  githubModalOverlay.setAttribute("aria-hidden", "false");
+  githubModalShown = true;
+}
+
+function hideGithubFollowPrompt() {
+  if (!githubModal || !githubModalOverlay) return;
+  githubModal.classList.remove("visible");
+  githubModalOverlay.classList.remove("visible");
+  githubModal.setAttribute("aria-hidden", "true");
+  githubModalOverlay.setAttribute("aria-hidden", "true");
+}
+
+if (closeGithubModalButton) {
+  closeGithubModalButton.addEventListener("click", hideGithubFollowPrompt);
+}
+
+if (githubModalOverlay) {
+  githubModalOverlay.addEventListener("click", hideGithubFollowPrompt);
+}
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    hideGithubFollowPrompt();
+  }
+});
 
 for (let i = 0; i < 4; ++i) {
   workers[i].onmessage = ({data}) => {
@@ -30,6 +66,7 @@ for (let i = 0; i < 4; ++i) {
       totalMove++;
       if (game.over) stopAI();
       if (game.won) {
+        showGithubFollowPrompt();
         game.keepPlaying = true;
         game.actuator.clearMessage();
       }
