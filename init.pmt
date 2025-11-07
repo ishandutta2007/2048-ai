@@ -1,3 +1,5 @@
 Change the style of this landing page, make it more gamely. Also add a github follow me popup with a github follow button on completion of the game.  Also "created by" text should point to my github home page ie https://github.com/ishandutta2007 and replace Gabriels name with mine ie Ishan.
 
 You have made it too large , now it doesn't fit within single screen 100% resolution, make everything bit smaller so that it fits within screen height , width wise it is fine
+
+when the game ends it shows game over, try again pop up but nothing to follow me on Github. Follow me on github button should be part of that popup.

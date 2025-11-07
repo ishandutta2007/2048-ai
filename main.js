@@ -64,7 +64,10 @@ for (let i = 0; i < 4; ++i) {
     if (working == 0) {
       game.move(bestMove);
       totalMove++;
-      if (game.over) stopAI();
+      if (game.over) {
+        stopAI();
+        showGithubFollowPrompt();
+      }
       if (game.won) {
         showGithubFollowPrompt();
         game.keepPlaying = true;
