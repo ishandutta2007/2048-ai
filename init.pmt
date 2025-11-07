@@ -3,3 +3,5 @@ Change the style of this landing page, make it more gamely. Also add a github fo
 You have made it too large , now it doesn't fit within single screen 100% resolution, make everything bit smaller so that it fits within screen height , width wise it is fine
 
 when the game ends it shows game over, try again pop up but nothing to follow me on Github. Follow me on github button should be part of that popup.
+
+The pop-up launches all right but it should get triggered when I press the try again button not when I press the start AI button.

@@ -66,7 +66,6 @@ for (let i = 0; i < 4; ++i) {
       totalMove++;
       if (game.over) {
         stopAI();
-        showGithubFollowPrompt();
       }
       if (game.won) {
         showGithubFollowPrompt();
@@ -121,3 +120,17 @@ toggleAI = startAI;
 
 document.querySelector("#ai-step").addEventListener('click', () => step())
 document.querySelector("#ai-start").addEventListener('click', () => toggleAI())
+
+// Add GitHub follow prompt after the game's retry functionality
+const retryButton = document.querySelector('.retry-button');
+const originalClick = retryButton.onclick;
+retryButton.onclick = function(e) {
+  // Call the original handler first
+  if (originalClick) originalClick.call(this, e);
+  
+  // Then show GitHub prompt if the game was over
+  if (game.over) {
+    // Small delay to ensure game has restarted
+    setTimeout(showGithubFollowPrompt, 50);
+  }
+};
