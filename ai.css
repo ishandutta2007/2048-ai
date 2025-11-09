@@ -9,7 +9,7 @@
   background: radial-gradient(circle at top, #342d52 0%, #201a36 45%, #120f24 100%);
   overflow-x: hidden;
   position: relative;
-  padding: 28px 12px;
+  padding: 100px 12px 28px;
   box-sizing: border-box;
 }
 
@@ -428,5 +428,61 @@
 
   .game-intro {
     text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-right {
+    margin-top: 1rem;
+  }
+
+  .retro-theme {
+    padding-top: 120px;
+  }
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  color: #f4f7ff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffb4fe;
+}
+
+@media screen and (max-width: 520px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-right {
+    margin-top: 1rem;
   }
 }
