@@ -1,5 +1,5 @@
 .retro-theme {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   display: flex;
   align-items: center;
@@ -7,9 +7,10 @@
   font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   color: #f4f7ff;
   background: radial-gradient(circle at top, #342d52 0%, #201a36 45%, #120f24 100%);
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   padding: 28px 12px;
+  box-sizing: border-box;
 }
 
 .retro-theme::before,
@@ -54,8 +55,6 @@
   padding: 28px 32px;
   max-width: 880px;
   width: 100%;
-  max-height: calc(100vh - 56px);
-  overflow-y: auto;
 }
 
 .heading {
@@ -231,12 +230,36 @@
 }
 
 .game-extras {
-  margin-top: 22px;
   padding: 18px;
   border-radius: 16px;
   background: rgba(17, 14, 28, 0.9);
   border: 1px solid rgba(118, 82, 219, 0.2);
   box-shadow: 0 10px 28px rgba(10, 6, 20, 0.38);
+}
+
+.main-layout {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.game-column {
+  flex: 2;
+  min-width: 0;
+}
+
+.info-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+@media screen and (max-width: 820px) {
+  .main-layout {
+    flex-direction: column;
+  }
 }
 
 .game-extras p {
