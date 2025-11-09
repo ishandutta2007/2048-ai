@@ -33,78 +33,82 @@
         </div>
       </div>
 
-      <div class="info-panels">
-        <div class="info-card">
-          <h2>How it works</h2>
-          <p>Our expectimax-powered AI thinks several moves ahead to keep the board alive and chase the legendary 2048 tile.</p>
-        </div>
-        <div class="info-card">
-          <h2>Game plan</h2>
-          <p>Spin up the AI or take the wheel yourself. Stack combos, ride the chain reactions, and push the score multiplier sky high.</p>
-        </div>
-      </div>
+      <div class="main-layout">
+        <div class="game-column">
+          <div class="above-game" style="display: none">
+            <p class="game-intro">Watch the AI get to the <strong>2048 tile!</strong></p>
+            <a class="restart-button">New Game</a>
+          </div>
+          <div class="ai-menu">
+            <p class="game-intro">AI controls</p>
+            <a class="ai-buttons" id="ai-step">One Step</a>
+            <a class="ai-buttons" id="ai-start">Start AI</a>
+          </div>
 
-      <div class="above-game" style="display: none">
-        <p class="game-intro">Watch the AI get to the <strong>2048 tile!</strong></p>
-        <a class="restart-button">New Game</a>
-      </div>
-      <div class="ai-menu">
-        <p class="game-intro">AI controls</p>
-        <a class="ai-buttons" id="ai-step">One Step</a>
-        <a class="ai-buttons" id="ai-start">Start AI</a>
-      </div>
+          <div class="game-container">
+            <div class="game-message">
+              <p></p>
+              <div class="lower">
+                <a class="keep-playing-button">Keep going</a>
+                <a class="retry-button">Try again</a>
+              </div>
+            </div>
 
-      <div class="game-container">
-        <div class="game-message">
-          <p></p>
-          <div class="lower">
-            <a class="keep-playing-button">Keep going</a>
-            <a class="retry-button">Try again</a>
+            <div class="grid-container">
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+              </div>
+            </div>
+
+            <div class="tile-container">
+
+            </div>
           </div>
         </div>
-
-        <div class="grid-container">
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
+        <div class="info-column">
+          <div class="info-panels">
+            <div class="info-card">
+              <h2>How it works</h2>
+              <p>Our expectimax-powered AI thinks several moves ahead to keep the board alive and chase the legendary 2048 tile.</p>
+            </div>
+            <div class="info-card">
+              <h2>Game plan</h2>
+              <p>Spin up the AI or take the wheel yourself. Stack combos, ride the chain reactions, and push the score multiplier sky high.</p>
+            </div>
           </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-          </div>
-          <div class="grid-row">
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
+          <div class="game-extras">
+            <p class="game-explanation">
+              <strong class="important">Controls:</strong> Use your <strong>arrow keys</strong> to slide every tile. Combine equal tiles to level up the board.
+            </p>
+            <p>
+              <strong class="important">Behind the scenes:</strong> This clone ships with an expectimax AI that evaluates thousands of boards per second to keep the combos flowing.
+            </p>
+            <p class="credits">
+              Created by <a href="https://github.com/ishandutta2007" target="_blank" rel="noopener noreferrer">Ishan.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank" rel="noopener noreferrer">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank" rel="noopener noreferrer">Threes by Asher Vollmer.</a>
+            </p>
           </div>
         </div>
-
-        <div class="tile-container">
-
-        </div>
-      </div>
-
-      <div class="game-extras">
-        <p class="game-explanation">
-          <strong class="important">Controls:</strong> Use your <strong>arrow keys</strong> to slide every tile. Combine equal tiles to level up the board.
-        </p>
-        <p>
-          <strong class="important">Behind the scenes:</strong> This clone ships with an expectimax AI that evaluates thousands of boards per second to keep the combos flowing.
-        </p>
-        <p class="credits">
-          Created by <a href="https://github.com/ishandutta2007" target="_blank" rel="noopener noreferrer">Ishan.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank" rel="noopener noreferrer">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank" rel="noopener noreferrer">Threes by Asher Vollmer.</a>
-        </p>
       </div>
     </div>
 
