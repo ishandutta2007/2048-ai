@@ -1,5 +1,5 @@
 .retro-theme {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@
   font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   color: #f4f7ff;
   background: radial-gradient(circle at top, #342d52 0%, #201a36 45%, #120f24 100%);
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   padding: 28px 12px;
   box-sizing: border-box;
@@ -55,6 +55,7 @@
   padding: 28px 32px;
   max-width: 880px;
   width: 100%;
+  overflow-y: hidden;
 }
 
 .heading {
